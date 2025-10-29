@@ -1066,27 +1066,47 @@ nav h3 {
 }
 
 /* ---------- Mobile View ---------- */
+/* ---------- Mobile View ---------- */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
+  header {
+    padding: 10px 20px;
   }
 
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* ---------- Navbar ---------- */
   .nav-links {
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 0;
     width: 100%;
-    background: #0a0a0a;
+    background: rgba(10, 10, 10, 0.97);
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
     height: 0;
     transition: height 0.4s ease;
+    z-index: 1000;
   }
 
   .nav-links.active {
-    height: 220px;
+    height: 250px;
+    padding-top: 10px;
   }
 
   .nav-links li {
@@ -1099,20 +1119,53 @@ nav h3 {
   }
 
   .nav-links a {
-    font-size: 1rem;
-    padding: 8px 0;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    display: block;
   }
-}
 
-/* ---------- Menu Animation ---------- */
-.menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
+  /* ---------- Menu Animation ---------- */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
 
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-.menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* ---------- About Section ---------- */
+  .about {
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .about p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
