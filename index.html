@@ -33,19 +33,28 @@
   </div>
 
   <!-- Navbar -->
-  <nav>
-    <div class="brand">
-      <div class="logoMini">AM</div>
-      <h3>Atharva More</h3>
-    </div>
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+ <nav>
+  <div class="brand">
+    <div class="logoMini">AM</div>
+    <h3>Atharva More</h3>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 
   <!-- Hero Section -->
   <section class="hero" id="home">
@@ -378,6 +387,17 @@ window.addEventListener('load', () => {
   }, 1200);
 });
 </script>
+<script>
+  const menu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+
 
 
 </body>
