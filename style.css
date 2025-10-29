@@ -997,3 +997,34 @@ section, .hero, .projects, .resume-section, footer {
     padding: 2rem 1rem !important;
   }
 }
+/* ---------- Navbar Mobile Fix ---------- */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5rem 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
