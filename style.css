@@ -1169,3 +1169,73 @@ nav h3 {
     line-height: 1.5;
   }
 }
+/* ================================
+   FINAL RESPONSIVE FIXES
+   ================================ */
+
+/* Fix navbar for small screens */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 0.6rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Fix about section text & layout for mobile */
+@media (max-width: 768px) {
+  #about {
+    margin: 1.5rem 1rem;
+    padding: 1.8rem 1rem;
+    text-align: center;
+  }
+
+  #about .about-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #about .about-content p {
+    word-wrap: break-word;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  #about h2 {
+    font-size: 1.6rem;
+  }
+
+  #about .about-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-highlights {
+    justify-content: center;
+  }
+}
+
+/* Ensure no side space on very small screens */
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  section, nav, #about, #contact {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
