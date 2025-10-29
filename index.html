@@ -388,17 +388,14 @@ window.addEventListener('load', () => {
 });
 </script>
 <script>
-  const menu = document.getElementById('mobile-menu');
-  const navLinks = document.querySelector('.nav-links');
+  const toggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-  menu.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    navLinks.classList.toggle('active');
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    navLinks.classList.toggle("active");
   });
 </script>
-
-
-
 
 </body>
 </html>
